@@ -513,6 +513,7 @@ body::after {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    touch-action: none;
 }
 
 #lightbox img {

@@ -209,13 +209,18 @@ fechar.addEventListener("click", () => {
 
 // swipe (arrastar)
 let startX = 0;
+let endX = 0;
 
-lightboxImg.addEventListener("touchstart", (e) => {
+lightbox.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
 });
 
-lightboxImg.addEventListener("touchend", (e) => {
-    let endX = e.changedTouches[0].clientX;
+function handleSwipe() {
     let diff = startX - endX;
 
     if (Math.abs(diff) > 50) {
@@ -228,9 +233,9 @@ lightboxImg.addEventListener("touchend", (e) => {
         }
 
         mostrarImagem();
-        reiniciarAutoSlide(); // importante!
+        reiniciarAutoSlide();
     }
-});
+}
 
 let autoSlide;
 
@@ -249,3 +254,10 @@ function reiniciarAutoSlide() {
     pararAutoSlide();
     iniciarAutoSlide();
 }
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+        pararAutoSlide();
+    }
+});

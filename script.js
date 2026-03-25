@@ -230,6 +230,11 @@ function pararAutoSlide() {
     clearInterval(autoSlide);
 }
 
+function reiniciarAutoSlide() {
+    pararAutoSlide();
+    iniciarAutoSlide();
+}
+
 // ===== SWIPE PARA MUDAR IMAGEM =====
 let startX = 0;
 let startY = 0;

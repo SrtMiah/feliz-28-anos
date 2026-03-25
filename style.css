@@ -239,27 +239,20 @@ li {
 }
 
 .galeria {
-    max-width: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-items: center;
-        justify-items: center;
-        justify-content: center;
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
 }
 
 .galeria img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
-    max-width: 150px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
 .galeria img:hover {
-    transform: scale(3.05);
+    transform: scale(1.5);
     justify-items: center;
 }
 
@@ -460,11 +453,16 @@ body::after {
         text-align: center;
         line-height: 1.2em;
         letter-spacing: normal;
-        white-space: nowrap;/* evita quebra de linha */
-        overflow: hidden;/* corta o texto se ultrapassar */
-        word-spacing: 5px; /* adiciona um pequeno espaçamento entre palavras para melhorar a legibilidade */
-        text-overflow: ellipsis;/* opcional: mostra "..." se cortar */
-        padding-right: 4px; /* adiciona um pequeno espaçamento à direita para evitar que o texto fique muito colado na borda */
+        white-space: nowrap;
+        /* evita quebra de linha */
+        overflow: hidden;
+        /* corta o texto se ultrapassar */
+        word-spacing: 5px;
+        /* adiciona um pequeno espaçamento entre palavras para melhorar a legibilidade */
+        text-overflow: ellipsis;
+        /* opcional: mostra "..." se cortar */
+        padding-right: 4px;
+        /* adiciona um pequeno espaçamento à direita para evitar que o texto fique muito colado na borda */
     }
 
     .para {
@@ -477,10 +475,14 @@ body::after {
         text-align: center;
         line-height: 1.2em;
         letter-spacing: normal;
-        white-space: nowrap;/* evita quebra de linha */
-        overflow: hidden;/* corta o texto se ultrapassar */
-        word-spacing: 5px; /* adiciona um pequeno espaçamento entre palavras para melhorar a legibilidade */
-        text-overflow: ellipsis;/* opcional: mostra "..." se cortar */
+        white-space: nowrap;
+        /* evita quebra de linha */
+        overflow: hidden;
+        /* corta o texto se ultrapassar */
+        word-spacing: 5px;
+        /* adiciona um pequeno espaçamento entre palavras para melhorar a legibilidade */
+        text-overflow: ellipsis;
+        /* opcional: mostra "..." se cortar */
     }
 
     .galeria {

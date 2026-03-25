@@ -526,6 +526,7 @@ body::after {
     max-width: 90%;
     max-height: 80%;
     border-radius: 10px;
+    touch-action: none;
 }
 
 #fechar-lightbox {
